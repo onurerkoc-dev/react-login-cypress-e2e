@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-
+//Login.jsx dosyasında, form verilerini ve hata mesajlarını yönetmek için useState kullanıyoruz. useEffect ile formun geçerliliğini kontrol ediyoruz ve hata mesajlarını güncelliyoruz. Form gönderildiğinde, eğer form geçerliyse kullanıcıyı başarı sayfasına yönlendiriyoruz.
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
-
 export default function Login() {
   const navigate = useNavigate();
   const [formData, setFormData] = useState({ email: '', password: '', terms: false });
